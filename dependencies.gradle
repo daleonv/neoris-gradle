@@ -41,7 +41,7 @@ dependencyManagement {
         dependency("mysql:mysql-connector-java:${mysqlVersion}")
         
         // propias del proyecto
-        dependency("com.ec.neoris.entities:neoris-entities:${neorisEntitiesVersion}")
+        dependency("com.ec.test.entities:test-entities:${testEntitiesVersion}")
 
     }
 }

@@ -25,7 +25,7 @@ ext {
     securityCore = "5.7.3"
 
 
-    neorisEntitiesVersion = '0.0.1-SNAPSHOT'
+    testEntitiesVersion = '0.0.1-SNAPSHOT'
 
 
 }
