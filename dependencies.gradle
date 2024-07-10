@@ -1,0 +1,47 @@
+dependencyManagement {
+    dependencies {
+        // Framework
+        dependencySet(group: 'org.springframework.boot', version: "${springBootVersion}") {
+            entry 'spring-boot-starter-web'
+            entry 'spring-boot-starter-cache'
+            entry 'spring-boot-starter-security'
+            entry 'spring-boot-autoconfigure'
+            entry 'spring-boot-starter-validation'
+            entry 'spring-boot-starter-data-jpa'
+            entry 'spring-boot-starter-test'
+            entry 'spring-boot-starter'
+            entry 'spring-boot-starter-webflux'
+        }
+
+        // Persistence
+        dependency("javax.persistence:javax.persistence-api:${javaxPersistenceApiVersion}")
+        dependency("javax.annotation:javax.annotation-api:${javaxAnnotationApiVersion}")
+        dependencySet(group: 'org.springframework.data', version: "${springDataJPAVersion}") {
+            entry 'spring-data-commons'
+            entry 'spring-data-jpa'
+        }
+
+        // Lombok
+        dependency("org.projectlombok:lombok:${lombokVersion}")
+
+        // Validators
+        dependency("javax.validation:validation-api:${validationApiVersion}")
+
+        dependency("javax.servlet:servlet-api:${javaxPersistenceApiVersion}")
+        dependency ("org.springframework.ws:spring-ws-core:${springWsCoreVersion}")
+        dependencySet(group: 'com.querydsl', version: "${querydslVersion}") {
+            entry 'querydsl-jpa'
+            entry 'querydsl-core'
+            entry 'querydsl-apt'
+        }
+        dependency("org.mapstruct:mapstruct:${mapstructVersion}")
+        dependency("org.mapstruct:mapstruct-processor:${mapstructVersion}")
+        dependency("org.hibernate:hibernate-core:${hibernateVersion}")
+        dependency("org.hibernate:hibernate-entitymanager:${hibernateVersion}")
+        dependency("mysql:mysql-connector-java:${mysqlVersion}")
+        
+        // propias del proyecto
+        dependency("com.ec.neoris.entities:neoris-entities:${neorisEntitiesVersion}")
+
+    }
+}
